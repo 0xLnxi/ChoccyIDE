@@ -128,7 +128,7 @@ function createParticles() {
             speedX: (Math.random() - 0.5) * 0.3,
             speedY: (Math.random() - 0.5) * 0.3,
             opacity: Math.random() * 0.5 + 0.1,
-            hue: Math.random() * 60 + 250 // Purple to pink range
+            hue: Math.random() * 30 + 15 // Orange/chocolate range (15-45)
         };
     }
     
@@ -170,7 +170,7 @@ function createParticles() {
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
-                    ctx.strokeStyle = `hsla(270, 70%, 60%, ${0.1 * (1 - dist / 120)})`;
+                    ctx.strokeStyle = `hsla(25, 70%, 50%, ${0.1 * (1 - dist / 120)})`;
                     ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }

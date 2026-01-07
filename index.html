@@ -59,13 +59,69 @@
                 <div class="hero-visual">
                     <div class="phone-mockup">
                         <div class="phone-screen">
-                            <div class="code-preview">
-                                <div class="code-line"><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span></div>
-                                <div class="code-line"></div>
-                                <div class="code-line"><span class="keyword">int</span> <span class="function">main</span>() {</div>
-                                <div class="code-line">    std::cout << <span class="string">"Hello!"</span>;</div>
-                                <div class="code-line">    <span class="keyword">return</span> <span class="number">0</span>;</div>
-                                <div class="code-line">}</div>
+                            <!-- Status Bar -->
+                            <div class="status-bar">
+                                <span class="time">12:30</span>
+                                <div class="status-icons">
+                                    <span>📶</span>
+                                    <span>🔋</span>
+                                </div>
+                            </div>
+                            <!-- App Header -->
+                            <div class="app-header">
+                                <div class="header-left">
+                                    <span class="menu-icon">☰</span>
+                                    <span class="file-name">main.cpp</span>
+                                </div>
+                                <div class="header-right">
+                                    <span class="run-btn">▶</span>
+                                </div>
+                            </div>
+                            <!-- Tab Bar -->
+                            <div class="tab-bar">
+                                <div class="tab active">main.cpp</div>
+                                <div class="tab">utils.h</div>
+                            </div>
+                            <!-- Code Editor -->
+                            <div class="code-editor">
+                                <div class="code-line">
+                                    <span class="line-num">1</span>
+                                    <span class="code"><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span></span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-num">2</span>
+                                    <span class="code"></span>
+                                </div>
+                                <div class="code-line current-line">
+                                    <span class="line-num">3</span>
+                                    <span class="code"><span class="keyword">int</span> <span class="function">main</span>() {</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-num">4</span>
+                                    <span class="code">    std::cout << <span class="string">"Hello!"</span>;</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-num">5</span>
+                                    <span class="code">    <span class="keyword">return</span> <span class="number">0</span>;</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-num">6</span>
+                                    <span class="code">}</span>
+                                </div>
+                            </div>
+                            <!-- Bottom Panel -->
+                            <div class="bottom-panel">
+                                <div class="panel-tabs">
+                                    <span class="panel-tab active">终端</span>
+                                    <span class="panel-tab">问题</span>
+                                    <span class="panel-tab">输出</span>
+                                </div>
+                                <div class="terminal-content">
+                                    <div class="terminal-line">$ g++ main.cpp -o main</div>
+                                    <div class="terminal-line">$ ./main</div>
+                                    <div class="terminal-line output">Hello!</div>
+                                    <div class="terminal-line cursor">$ <span class="blink">_</span></div>
+                                </div>
                             </div>
                         </div>
                     </div>
