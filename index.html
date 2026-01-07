@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choccy IDE - 移动端代码编辑器</title>
+    <meta name="description" content="Choccy IDE - 一款功能强大的 Android 代码编辑器。在手机上编写、编译、调试代码。">
+    <meta name="keywords" content="IDE, mobile, Android, code editor, programming, C++, Python, Java, 移动开发, 代码编辑器">
+    <meta property="og:title" content="Choccy IDE - 移动端代码编辑器">
+    <meta property="og:description" content="在手机上编写、编译、调试代码">
+    <meta property="og:image" content="assets/icon.png">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                <img src="assets/icon.png" alt="Choccy IDE">
+                <span>Choccy IDE</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">功能</a></li>
+                <li><a href="#languages">语言</a></li>
+                <li><a href="#screenshots">截图</a></li>
+                <li><a href="#download">下载</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>🍫 Choccy IDE</h1>
+                    <p class="hero-subtitle">在手机上编写、编译、调试代码</p>
+                    <p class="hero-desc">一款功能强大的移动端代码编辑器，内置完整的 Linux 开发环境，让编程随时随地。</p>
+                    <div class="hero-buttons">
+                        <a href="#download" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            下载 APK
+                        </a>
+                        <a href="#features" class="btn btn-secondary">了解更多</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="code-preview">
+                                <div class="code-line"><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span></div>
+                                <div class="code-line"></div>
+                                <div class="code-line"><span class="keyword">int</span> <span class="function">main</span>() {</div>
+                                <div class="code-line">    std::cout << <span class="string">"Hello!"</span>;</div>
+                                <div class="code-line">    <span class="keyword">return</span> <span class="number">0</span>;</div>
+                                <div class="code-line">}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">✨ 核心功能</h2>
+                <p class="section-subtitle">桌面级的开发体验，移动端的便携优势</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>智能代码编辑</h3>
+                        <p>语法高亮、代码补全、括号匹配、多光标编辑、代码折叠，提供流畅的编辑体验。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>完整编译环境</h3>
+                        <p>内置 proot Ubuntu 环境，支持 GCC、G++、CMake、Python、Java、Node.js 等工具链。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🐛</div>
+                        <h3>调试支持</h3>
+                        <p>支持 GDB 调试 C/C++，debugpy 调试 Python。设置断点、单步执行、查看变量值。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📁</div>
+                        <h3>项目管理</h3>
+                        <p>完整的文件浏览器，支持 CMake 项目、多文件编辑、项目模板快速创建新项目。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🖥️</div>
+                        <h3>集成终端</h3>
+                        <p>内置终端模拟器，支持多标签页，可直接运行 Linux 命令，安装软件包。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>LSP 智能补全</h3>
+                        <p>支持语言服务器协议，提供智能补全、跳转定义、查找引用、重命名等高级功能。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages Section -->
+        <section id="languages" class="languages">
+            <div class="container">
+                <h2 class="section-title">🚀 支持的语言</h2>
+                <p class="section-subtitle">覆盖主流编程语言，满足各种开发需求</p>
+                <div class="lang-grid">
+                    <div class="lang-card">
+                        <span class="lang-icon">🔷</span>
+                        <span class="lang-name">C / C++</span>
+                        <span class="lang-tools">GCC, G++, CMake, GDB</span>
+                    </div>
+                    <div class="lang-card">
+                        <span class="lang-icon">🐍</span>
+                        <span class="lang-name">Python</span>
+                        <span class="lang-tools">Python 3, pip, debugpy</span>
+                    </div>
+                    <div class="lang-card">
+                        <span class="lang-icon">☕</span>
+                        <span class="lang-name">Java</span>
+                        <span class="lang-tools">OpenJDK, Maven</span>
+                    </div>
+                    <div class="lang-card">
+                        <span class="lang-icon">🟨</span>
+                        <span class="lang-name">JavaScript</span>
+                        <span class="lang-tools">Node.js, npm</span>
+                    </div>
+                    <div class="lang-card">
+                        <span class="lang-icon">🔷</span>
+                        <span class="lang-name">TypeScript</span>
+                        <span class="lang-tools">tsc, ts-node</span>
+                    </div>
+                    <div class="lang-card">
+                        <span class="lang-icon">🐹</span>
+                        <span class="lang-name">Go</span>
+                        <span class="lang-tools">Go, Delve</span>
+                    </div>
+                    <div class="lang-card">
+                        <span class="lang-icon">🦀</span>
+                        <span class="lang-name">Rust</span>
+                        <span class="lang-tools">rustc, cargo</span>
+                    </div>
+                    <div class="lang-card">
+                        <span class="lang-icon">🌙</span>
+                        <span class="lang-name">Lua</span>
+                        <span class="lang-tools">Lua 5.4</span>
+                    </div>
+                    <div class="lang-card">
+                        <span class="lang-icon">💜</span>
+                        <span class="lang-name">C#</span>
+                        <span class="lang-tools">.NET, Mono</span>
+                    </div>
+                    <div class="lang-card">
+                        <span class="lang-icon">🟣</span>
+                        <span class="lang-name">Kotlin</span>
+                        <span class="lang-tools">kotlinc</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section id="screenshots" class="screenshots">
+            <div class="container">
+                <h2 class="section-title">📱 应用截图</h2>
+                <p class="section-subtitle">简洁美观的界面设计</p>
+                <div class="screenshots-grid">
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <span>代码编辑器</span>
+                        </div>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <span>调试界面</span>
+                        </div>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <span>终端</span>
+                        </div>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <span>项目管理</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="download">
+            <div class="container">
+                <h2 class="section-title">📥 下载安装</h2>
+                <p class="section-subtitle">支持 Android 8.0 及以上版本</p>
+                <div class="download-card">
+                    <div class="version-info">
+                        <span class="version-badge">v1.1.0</span>
+                        <span class="version-date">2026年1月</span>
+                    </div>
+                    <h3>Choccy IDE for Android</h3>
+                    <ul class="download-features">
+                        <li>✅ 完整的 Linux 开发环境</li>
+                        <li>✅ 支持 10+ 编程语言</li>
+                        <li>✅ 内置调试器</li>
+                        <li>✅ 中文界面</li>
+                    </ul>
+                    <div class="download-buttons">
+                        <a href="#" class="btn btn-primary btn-large">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.523 2.047a.5.5 0 0 0-.443-.047l-14 6a.5.5 0 0 0 0 .914l5.5 2.357 2.357 5.5a.5.5 0 0 0 .914 0l6-14a.5.5 0 0 0-.047-.443z"/>
+                            </svg>
+                            下载 APK (arm64)
+                        </a>
+                    </div>
+                    <p class="download-note">* 首次安装需要下载约 500MB 的 Linux 环境</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requirements Section -->
+        <section class="requirements">
+            <div class="container">
+                <h2 class="section-title">📋 系统要求</h2>
+                <div class="requirements-grid">
+                    <div class="requirement-item">
+                        <h4>操作系统</h4>
+                        <p>Android 8.0 (API 26) 或更高</p>
+                    </div>
+                    <div class="requirement-item">
+                        <h4>处理器</h4>
+                        <p>ARM64 (aarch64)</p>
+                    </div>
+                    <div class="requirement-item">
+                        <h4>存储空间</h4>
+                        <p>至少 2GB 可用空间</p>
+                    </div>
+                    <div class="requirement-item">
+                        <h4>内存</h4>
+                        <p>建议 4GB 或更多</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/icon.png" alt="Choccy IDE" class="footer-logo">
+                    <p>Choccy IDE - 移动端代码编辑器</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>链接</h4>
+                        <a href="#features">功能介绍</a>
+                        <a href="#download">下载</a>
+                        <a href="#screenshots">截图</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>联系</h4>
+                        <a href="mailto:contact@example.com">反馈问题</a>
+                        <a href="#">加入交流群</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024-2026 Choccy IDE. Made with ❤️ for mobile developers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
