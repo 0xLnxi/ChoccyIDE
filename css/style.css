@@ -506,12 +506,16 @@ footer { border-top: 1px solid var(--border); padding: 48px 0; }
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
-    .hero .container { flex-direction: column; text-align: center; gap: 60px; max-width: 100%; }
-    .hero-content { width: 100%; max-width: 500px; }
-    .hero-visual { width: auto; }
+    .hero .container { 
+        grid-template-columns: 1fr; 
+        text-align: center; 
+        gap: 40px; 
+        justify-items: center; 
+    }
+    .hero-content { max-width: 500px; }
+    .hero-visual { justify-self: center; order: -1; }
     .hero-actions { justify-content: center; }
     .hero-stats { justify-content: center; }
-    .hero-visual { order: -1; }
     .floating-cards { display: none; }
     .features-grid { grid-template-columns: repeat(2, 1fr); }
     .window-body { grid-template-columns: 1fr; }
@@ -527,23 +531,36 @@ footer { border-top: 1px solid var(--border); padding: 48px 0; }
     .nav-links, .nav-right { display: none; }
     .mobile-menu-btn { display: flex; }
     .hero { padding: 100px 0 60px; min-height: auto; }
-    .hero h1 { font-size: 40px; }
-    .hero-desc { font-size: 16px; }
-    .hero-stats { flex-wrap: wrap; gap: 24px; }
+    .hero .container { gap: 30px; padding: 0 16px; }
+    .hero h1 { font-size: 32px; }
+    .hero-desc { font-size: 15px; }
+    .hero-stats { flex-wrap: wrap; gap: 20px; }
     .stat-divider { display: none; }
-    section { padding: 100px 0; }
-    .section-header h2 { font-size: 32px; }
-    .features-grid { grid-template-columns: 1fr; }
+    .phone-frame { width: 220px; height: 460px; border-radius: 30px; }
+    .phone-notch { width: 70px; height: 20px; }
+    .phone-screen { border-radius: 24px; }
+    section { padding: 80px 0; }
+    .section-header h2 { font-size: 28px; }
+    .section-header p { font-size: 15px; }
+    .features-grid { grid-template-columns: 1fr; gap: 16px; }
+    .feature-card { padding: 24px; }
+    .lang-grid { gap: 8px; }
+    .lang-item { padding: 10px 14px; font-size: 13px; }
     .lang-orbit { width: 280px; height: 280px; }
     .lang-ring.ring-1 { width: 140px; height: 140px; margin: -70px 0 0 -70px; }
     .lang-ring.ring-2 { width: 240px; height: 240px; margin: -120px 0 0 -120px; }
     .ring-1 .lang-node { transform: rotate(calc(360deg / var(--total) * var(--i))) translateX(70px) rotate(calc(-360deg / var(--total) * var(--i))); }
     .ring-2 .lang-node { transform: rotate(calc(360deg / var(--total) * var(--i))) translateX(120px) rotate(calc(-360deg / var(--total) * var(--i))); }
     .lang-node span { padding: 8px 12px; font-size: 10px; }
-    .download-card { padding: 48px 24px; }
-    .download-content h2 { font-size: 28px; }
-    .download-meta { flex-direction: column; gap: 20px; }
-    .download-hash { flex-direction: column; }
+    .download { padding: 80px 0 100px; }
+    .download-card { padding: 40px 20px; border-radius: var(--radius-lg); }
+    .download-content h2 { font-size: 24px; }
+    .download-content > p { font-size: 15px; margin-bottom: 30px; }
+    .download-meta { flex-direction: column; gap: 16px; }
+    .download-hash { flex-direction: column; gap: 8px; }
     .download-hash code { font-size: 9px; word-break: break-all; }
     .footer-content { flex-direction: column; gap: 24px; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .btn { padding: 12px 24px; font-size: 13px; }
+    .btn-large { padding: 14px 28px; font-size: 14px; }
 }
