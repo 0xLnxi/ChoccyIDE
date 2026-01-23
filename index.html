@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choccy IDE - Mobile Code Editor</title>
-    <meta name="description" content="Choccy IDE - A powerful Android code editor with built-in Linux environment.">
+    <title>Choccy IDE - AI-Powered Code Editor</title>
+    <meta name="description" content="Choccy IDE - A powerful code editor with AI Agent for Android and Windows. Orbit AI helps you design, plan, and execute code autonomously.">
     <link rel="icon" type="image/png" href="assets/icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 <body>
     <canvas id="particles"></canvas>
     <div class="cursor-glow"></div>
-    
+
     <header>
         <nav class="container">
             <a href="#" class="logo">
@@ -22,6 +22,7 @@
                 <span>Choccy IDE</span>
             </a>
             <ul class="nav-links">
+                <li><a href="#orbit" data-i18n="nav.orbit">Orbit AI</a></li>
                 <li><a href="#features" data-i18n="nav.features">Features</a></li>
                 <li><a href="#languages" data-i18n="nav.languages">Languages</a></li>
                 <li><a href="#download" data-i18n="nav.download">Download</a></li>
@@ -54,21 +55,21 @@
                 <div class="hero-content">
                     <div class="hero-badge animate-in">
                         <span class="badge-dot"></span>
-                        <span data-i18n="hero.badge">Now available for Android</span>
+                        <span data-i18n="hero.badge">Now with AI Agent - Android & Windows</span>
                     </div>
                     <h1 class="animate-in delay-1">
-                        <span data-i18n="hero.title1">Code anywhere.</span><br>
-                        <span class="text-gradient" data-i18n="hero.title2">Build anything.</span>
+                        <span data-i18n="hero.title1">Code Anywhere.</span><br>
+                        <span class="text-gradient" data-i18n="hero.title2">Build Anything.</span>
                     </h1>
-                    <p class="hero-desc animate-in delay-2" data-i18n="hero.desc">A powerful mobile IDE with built-in Linux environment. Write, compile, and debug code directly on your phone.</p>
+                    <p class="hero-desc animate-in delay-2" data-i18n="hero.desc">Choccy IDE with Orbit AI Agent - Design, plan, and execute code autonomously. From requirements to working code, fully automated.</p>
                     <div class="hero-actions animate-in delay-3">
-                        <a href="https://github.com/0xLnxi/ChoccyIDE/releases/latest/download/app-release.apk" class="btn btn-primary btn-glow">
+                        <a href="#download" class="btn btn-primary btn-glow">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                                 <polyline points="7 10 12 15 17 10"/>
                                 <line x1="12" y1="15" x2="12" y2="3"/>
                             </svg>
-                            <span data-i18n="hero.download">Download APK</span>
+                            <span data-i18n="hero.download">Download Now</span>
                         </a>
                         <a href="https://github.com/0xLnxi/ChoccyIDE" class="btn btn-secondary" target="_blank">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -84,13 +85,13 @@
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat">
-                            <span class="stat-value">113 MB</span>
-                            <span class="stat-label" data-i18n="hero.size">Size</span>
+                            <span class="stat-value">Android & Windows</span>
+                            <span class="stat-label" data-i18n="hero.platforms">Platforms</span>
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat">
-                            <span class="stat-value">Android 8+</span>
-                            <span class="stat-label" data-i18n="hero.requires">Requires</span>
+                            <span class="stat-value">Orbit AI</span>
+                            <span class="stat-label" data-i18n="hero.aiagent">AI Agent</span>
                         </div>
                     </div>
                 </div>
@@ -107,24 +108,103 @@
                     <div class="floating-cards">
                         <div class="float-card card-1">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="16 18 22 12 16 6"></polyline>
-                                <polyline points="8 6 2 12 8 18"></polyline>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
                             </svg>
-                            <span>C++</span>
+                            <span>Orbit AI</span>
                         </div>
                         <div class="float-card card-2">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
                             </svg>
-                            <span>Python</span>
+                            <span>Windows</span>
                         </div>
                         <div class="float-card card-3">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="4 17 10 11 4 5"></polyline>
                                 <line x1="12" y1="19" x2="20" y2="19"></line>
                             </svg>
-                            <span>Terminal</span>
+                            <span>Autonomous</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Orbit AI Section -->
+        <section id="orbit" class="orbit-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="orbit.tag">AI AGENT</span>
+                    <h2 data-i18n="orbit.title">Meet Orbit AI - Your Autonomous Coding Partner</h2>
+                    <p data-i18n="orbit.desc">From idea to implementation, Orbit AI handles the entire development workflow autonomously</p>
+                </div>
+                <div class="orbit-features">
+                    <div class="orbit-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="orbit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="orbit.design.title">Autonomous Design</h3>
+                        <p data-i18n="orbit.design.desc">Orbit analyzes your requirements and generates complete design documents - PRD, architecture, module design, all automatically.</p>
+                    </div>
+                    <div class="orbit-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="orbit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 20h9"></path>
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="orbit.plan.title">Smart Task Planning</h3>
+                        <p data-i18n="orbit.plan.desc">Breaks down complex features into executable tasks with dependencies, risk assessment, and checkpoints.</p>
+                    </div>
+                    <div class="orbit-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="orbit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="orbit.execute.title">Automated Execution</h3>
+                        <p data-i18n="orbit.execute.desc">Executes tasks one by one, reads design docs, writes code, runs checkpoints, and auto-fixes errors.</p>
+                    </div>
+                    <div class="orbit-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="orbit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="orbit.control.title">You Stay in Control</h3>
+                        <p data-i18n="orbit.control.desc">Review and approve each phase. Rollback any changes with one click. Full transparency and control.</p>
+                    </div>
+                </div>
+                <div class="orbit-modes">
+                    <h3 data-i18n="orbit.modes.title">Three Modes for Every Need</h3>
+                    <div class="modes-grid">
+                        <div class="mode-card">
+                            <span class="mode-badge">MINI</span>
+                            <h4 data-i18n="orbit.modes.mini.title">Quick Assistance</h4>
+                            <p data-i18n="orbit.modes.mini.desc">Fast answers and simple code edits</p>
+                        </div>
+                        <div class="mode-card">
+                            <span class="mode-badge plus">MINI+</span>
+                            <h4 data-i18n="orbit.modes.miniplus.title">Enhanced Tools</h4>
+                            <p data-i18n="orbit.modes.miniplus.desc">File operations and command execution</p>
+                        </div>
+                        <div class="mode-card featured">
+                            <span class="mode-badge full">FULL</span>
+                            <h4 data-i18n="orbit.modes.full.title">Autonomous Agent</h4>
+                            <p data-i18n="orbit.modes.full.desc">Complete design-to-execution workflow</p>
                         </div>
                     </div>
                 </div>
@@ -272,33 +352,67 @@
                 <div class="download-card">
                     <div class="download-bg"></div>
                     <div class="download-content">
-                        <h2 data-i18n="download.title">Ready to code on the go?</h2>
-                        <p data-i18n="download.desc">Download Choccy IDE and start building today.</p>
-                        <a href="https://github.com/0xLnxi/ChoccyIDE/releases/latest/download/app-release.apk" class="btn btn-primary btn-large btn-glow">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                <polyline points="7 10 12 15 17 10"/>
-                                <line x1="12" y1="15" x2="12" y2="3"/>
-                            </svg>
-                            <span data-i18n="download.button">Download for Android</span>
-                        </a>
-                        <div class="download-meta">
-                            <div class="meta-item">
-                                <span class="meta-label" data-i18n="download.version">Version</span>
-                                <span class="meta-value">1.1.0</span>
+                        <h2 data-i18n="download.title">Ready to code with AI?</h2>
+                        <p data-i18n="download.desc">Download Choccy IDE with Orbit AI Agent and start building today.</p>
+
+                        <div class="download-platforms">
+                            <!-- Windows Download -->
+                            <div class="platform-card">
+                                <div class="platform-icon">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                                    </svg>
+                                </div>
+                                <h3 data-i18n="download.windows.title">Windows Desktop</h3>
+                                <p data-i18n="download.windows.desc">Full-featured desktop experience with Orbit AI</p>
+                                <a href="https://github.com/0xLnxi/ChoccyIDE/releases/latest/download/choccy-ide-windows.zip" class="btn btn-primary btn-glow">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                    <span data-i18n="download.windows.button">Download for Windows</span>
+                                </a>
+                                <div class="platform-meta">
+                                    <span>Windows 10/11</span>
+                                    <span>•</span>
+                                    <span>64-bit</span>
+                                </div>
                             </div>
-                            <div class="meta-item">
-                                <span class="meta-label" data-i18n="download.size">Size</span>
-                                <span class="meta-value">113 MB</span>
-                            </div>
-                            <div class="meta-item">
-                                <span class="meta-label" data-i18n="download.requires">Requires</span>
-                                <span class="meta-value">Android 8.0+</span>
+
+                            <!-- Android Download -->
+                            <div class="platform-card">
+                                <div class="platform-icon">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1367 1.0989L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3435-4.1021-2.6892-7.5743-6.1185-9.4396"/>
+                                    </svg>
+                                </div>
+                                <h3 data-i18n="download.android.title">Android</h3>
+                                <p data-i18n="download.android.desc">Code on the go with built-in Linux environment</p>
+                                <a href="https://github.com/0xLnxi/ChoccyIDE/releases/latest/download/app-release.apk" class="btn btn-primary btn-glow">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                    <span data-i18n="download.android.button">Download APK</span>
+                                </a>
+                                <div class="platform-meta">
+                                    <span data-i18n="download.android.version">Android 8-10, 12+</span>
+                                    <span>•</span>
+                                    <span>113 MB</span>
+                                </div>
+                                <div class="platform-note" data-i18n="download.android.warning">
+                                    ⚠️ Not compatible with Android 11 and Baidu IME
+                                </div>
                             </div>
                         </div>
-                        <div class="download-hash">
-                            <span>SHA256:</span>
-                            <code>fc2f22541d28436f3825e3b71d4e378b1b534fac4591ff04ce8ee64276f46f94</code>
+
+                        <div class="download-info">
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="download.version">Version</span>
+                                <span class="info-value">2.0.0</span>
+                            </div>
                         </div>
                     </div>
                 </div>
