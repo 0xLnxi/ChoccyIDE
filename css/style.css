@@ -812,14 +812,41 @@ footer { border-top: 1px solid var(--border); padding: 48px 0; }
     
     /* Hero 区域 */
     .hero { padding: 80px 0 50px; min-height: auto; }
-    .hero .container { gap: 30px; }
-    .hero-badge { padding: 8px 16px; font-size: 12px; }
-    .hero h1 { font-size: 36px; line-height: 1.2; }
-    .hero-desc { font-size: 16px; margin: 20px 0 30px; }
+    .hero .container { 
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 16px;
+        text-align: center;
+    }
+    .hero-content { 
+        max-width: 100%;
+        width: 100%;
+    }
+    .hero-visual {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .hero-badge { 
+        padding: 8px 16px; 
+        font-size: 12px; 
+        margin-bottom: 20px;
+    }
+    .hero h1 { 
+        font-size: 36px; 
+        line-height: 1.2; 
+        margin-bottom: 20px;
+    }
+    .hero-desc { 
+        font-size: 16px; 
+        margin-bottom: 30px; 
+    }
     .hero-actions { 
         flex-direction: column; 
         width: 100%; 
         gap: 12px; 
+        margin-bottom: 30px;
+        align-items: center;
     }
     .hero-actions .btn { 
         width: 100%; 
@@ -833,7 +860,8 @@ footer { border-top: 1px solid var(--border); padding: 48px 0; }
         width: 100%;
     }
     .stat-divider { display: none; }
-    .stat-item {
+    .stat-item,
+    .stat {
         padding: 16px;
         background: var(--bg-card);
         border-radius: var(--radius);
@@ -848,6 +876,10 @@ footer { border-top: 1px solid var(--border); padding: 48px 0; }
         border-radius: 32px; 
     }
     .phone-notch { width: 80px; height: 22px; }
+    .phone-screen { border-radius: 26px; }
+    .phone-mockup { 
+        transform: scale(0.85);
+    }
     .phone-screen { border-radius: 26px; }
     
     /* 章节通用 */
