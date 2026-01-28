@@ -20,19 +20,43 @@
 
 /* ===== Reset ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { 
+    scroll-behavior: smooth; 
+    /* 防止移动端双击缩放延迟 */
+    touch-action: manipulation;
+}
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    /* 改善移动端文本渲染 */
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-a { color: inherit; text-decoration: none; }
+a { 
+    color: inherit; 
+    text-decoration: none; 
+    /* 移除移动端点击高亮 */
+    -webkit-tap-highlight-color: transparent;
+}
+button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
 ul { list-style: none; }
-img { max-width: 100%; height: auto; }
+img { 
+    max-width: 100%; 
+    height: auto; 
+    /* 防止图片拖动 */
+    -webkit-user-drag: none;
+    user-select: none;
+}
 
 /* ===== Particles Canvas ===== */
 #particles {
@@ -750,6 +774,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 0; }
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
+    .container { padding: 0 20px; }
     .hero .container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -773,46 +798,239 @@ footer { border-top: 1px solid var(--border); padding: 48px 0; }
 }
 
 @media (max-width: 768px) {
+    .container { padding: 0 16px; }
+    
+    /* 禁用鼠标悬停效果，改用触摸友好 */
+    .cursor-glow { display: none; }
+    
+    /* 导航栏 */
     .nav-links, .nav-right { display: none; }
     .mobile-menu-btn { display: flex; }
-    .hero { padding: 100px 0 60px; min-height: auto; }
-    .hero .container { gap: 30px; padding: 0 16px; }
-    .hero h1 { font-size: 32px; }
-    .hero-desc { font-size: 15px; }
-    .hero-stats { flex-wrap: wrap; gap: 20px; }
+    header nav { padding: 16px 0; }
+    .logo span { font-size: 18px; }
+    .logo img { width: 32px; height: 32px; }
+    
+    /* Hero 区域 */
+    .hero { padding: 80px 0 50px; min-height: auto; }
+    .hero .container { gap: 30px; }
+    .hero-badge { padding: 8px 16px; font-size: 12px; }
+    .hero h1 { font-size: 36px; line-height: 1.2; }
+    .hero-desc { font-size: 16px; margin: 20px 0 30px; }
+    .hero-actions { 
+        flex-direction: column; 
+        width: 100%; 
+        gap: 12px; 
+    }
+    .hero-actions .btn { 
+        width: 100%; 
+        max-width: 400px;
+        padding: 16px 24px;
+        font-size: 15px;
+    }
+    .hero-stats { 
+        flex-direction: column;
+        gap: 16px; 
+        width: 100%;
+    }
     .stat-divider { display: none; }
-    .phone-frame { width: 220px; height: 460px; border-radius: 30px; }
-    .phone-notch { width: 70px; height: 20px; }
-    .phone-screen { border-radius: 24px; }
-    section { padding: 80px 0; }
-    .section-header h2 { font-size: 28px; }
+    .stat-item {
+        padding: 16px;
+        background: var(--bg-card);
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        width: 100%;
+    }
+    
+    /* 手机框架 */
+    .phone-frame { 
+        width: 240px; 
+        height: 500px; 
+        border-radius: 32px; 
+    }
+    .phone-notch { width: 80px; height: 22px; }
+    .phone-screen { border-radius: 26px; }
+    
+    /* 章节通用 */
+    section { padding: 60px 0; }
+    .section-header { margin-bottom: 32px; }
+    .section-header h2 { font-size: 32px; }
+    .section-header p { font-size: 16px; }
+    .section-tag { font-size: 11px; padding: 6px 14px; }
+    
+    /* 功能卡片 */
+    .features-grid { 
+        grid-template-columns: 1fr; 
+        gap: 16px; 
+    }
+    .feature-card { 
+        padding: 28px 20px; 
+    }
+    .feature-card h3 { font-size: 18px; }
+    .feature-card p { font-size: 14px; }
+    
+    /* Orbit AI 卡片 */
+    .orbit-features { 
+        grid-template-columns: 1fr; 
+        gap: 16px; 
+    }
+    .orbit-card { 
+        padding: 28px 20px; 
+    }
+    .orbit-card h3 { font-size: 18px; }
+    .orbit-card p { font-size: 14px; }
+    .orbit-icon { width: 56px; height: 56px; }
+    
+    /* 模式卡片 */
+    .modes-grid { 
+        grid-template-columns: 1fr; 
+        gap: 12px; 
+    }
+    .mode-card { 
+        padding: 20px 18px; 
+    }
+    .mode-badge { 
+        padding: 4px 12px; 
+        font-size: 10px; 
+    }
+    .mode-card h4 { font-size: 16px; }
+    .mode-card p { font-size: 13px; }
+    
+    /* 下载平台 */
+    .download-platforms { 
+        grid-template-columns: 1fr; 
+        gap: 16px; 
+    }
+    .platform-card { 
+        padding: 32px 20px; 
+    }
+    .platform-card h3 { font-size: 20px; }
+    
+    /* 语言支持 */
+    .lang-grid { 
+        gap: 8px; 
+        padding: 0 8px;
+    }
+    .lang-item { 
+        padding: 12px 16px; 
+        font-size: 14px; 
+    }
+    .lang-orbit { 
+        width: 300px; 
+        height: 300px; 
+    }
+    .lang-ring.ring-1 { 
+        width: 150px; 
+        height: 150px; 
+        margin: -75px 0 0 -75px; 
+    }
+    .lang-ring.ring-2 { 
+        width: 250px; 
+        height: 250px; 
+        margin: -125px 0 0 -125px; 
+    }
+    .ring-1 .lang-node { 
+        transform: rotate(calc(360deg / var(--total) * var(--i))) translateX(75px) rotate(calc(-360deg / var(--total) * var(--i))); 
+    }
+    .ring-2 .lang-node { 
+        transform: rotate(calc(360deg / var(--total) * var(--i))) translateX(125px) rotate(calc(-360deg / var(--total) * var(--i))); 
+    }
+    .lang-node span { 
+        padding: 10px 14px; 
+        font-size: 11px; 
+    }
+    
+    /* 下载区域 */
+    .download { padding: 60px 0 80px; }
+    .download-card { 
+        padding: 40px 20px; 
+        border-radius: var(--radius-lg); 
+    }
+    .download-content h2 { font-size: 28px; }
+    .download-content > p { 
+        font-size: 15px; 
+        margin-bottom: 30px; 
+    }
+    .download-meta { 
+        flex-direction: column; 
+        gap: 16px; 
+        align-items: stretch;
+    }
+    .download-hash { 
+        flex-direction: column; 
+        gap: 8px; 
+        align-items: flex-start;
+    }
+    .download-hash code { 
+        font-size: 10px; 
+        word-break: break-all; 
+        padding: 8px 12px;
+        width: 100%;
+    }
+    .download-info { 
+        flex-direction: column; 
+        gap: 16px; 
+        text-align: center;
+    }
+    
+    /* 页脚 */
+    .footer-content { 
+        flex-direction: column; 
+        gap: 24px; 
+        text-align: center;
+    }
+    .footer-links { 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 16px 24px; 
+    }
+    
+    /* 按钮 */
+    .btn { 
+        padding: 14px 24px; 
+        font-size: 14px; 
+        /* 增大触摸区域 */
+        min-height: 48px;
+    }
+    .btn-large { 
+        padding: 16px 32px; 
+        font-size: 15px; 
+        min-height: 52px;
+    }
+}
+
+/* 小屏手机优化 */
+@media (max-width: 480px) {
+    .hero h1 { font-size: 28px; }
+    .hero-desc { font-size: 15px; }
+    .section-header h2 { font-size: 26px; }
     .section-header p { font-size: 15px; }
-    .features-grid { grid-template-columns: 1fr; gap: 16px; }
-    .feature-card { padding: 24px; }
-    .orbit-features { grid-template-columns: 1fr; gap: 16px; }
-    .orbit-card { padding: 24px; }
-    .modes-grid { grid-template-columns: 1fr; gap: 16px; }
-    .mode-card { padding: 24px 20px; }
-    .download-platforms { grid-template-columns: 1fr; gap: 16px; }
-    .platform-card { padding: 32px 24px; }
-    .lang-grid { gap: 8px; }
-    .lang-item { padding: 10px 14px; font-size: 13px; }
-    .lang-orbit { width: 280px; height: 280px; }
-    .lang-ring.ring-1 { width: 140px; height: 140px; margin: -70px 0 0 -70px; }
-    .lang-ring.ring-2 { width: 240px; height: 240px; margin: -120px 0 0 -120px; }
-    .ring-1 .lang-node { transform: rotate(calc(360deg / var(--total) * var(--i))) translateX(70px) rotate(calc(-360deg / var(--total) * var(--i))); }
-    .ring-2 .lang-node { transform: rotate(calc(360deg / var(--total) * var(--i))) translateX(120px) rotate(calc(-360deg / var(--total) * var(--i))); }
-    .lang-node span { padding: 8px 12px; font-size: 10px; }
-    .download { padding: 80px 0 100px; }
-    .download-card { padding: 40px 20px; border-radius: var(--radius-lg); }
+    .phone-frame { 
+        width: 200px; 
+        height: 420px; 
+    }
+    .lang-orbit { 
+        width: 260px; 
+        height: 260px; 
+    }
+    .lang-ring.ring-1 { 
+        width: 130px; 
+        height: 130px; 
+        margin: -65px 0 0 -65px; 
+    }
+    .lang-ring.ring-2 { 
+        width: 220px; 
+        height: 220px; 
+        margin: -110px 0 0 -110px; 
+    }
+    .ring-1 .lang-node { 
+        transform: rotate(calc(360deg / var(--total) * var(--i))) translateX(65px) rotate(calc(-360deg / var(--total) * var(--i))); 
+    }
+    .ring-2 .lang-node { 
+        transform: rotate(calc(360deg / var(--total) * var(--i))) translateX(110px) rotate(calc(-360deg / var(--total) * var(--i))); 
+    }
+    .lang-node span { 
+        padding: 8px 10px; 
+        font-size: 10px; 
+    }
     .download-content h2 { font-size: 24px; }
-    .download-content > p { font-size: 15px; margin-bottom: 30px; }
-    .download-meta { flex-direction: column; gap: 16px; }
-    .download-hash { flex-direction: column; gap: 8px; }
-    .download-hash code { font-size: 9px; word-break: break-all; }
-    .download-info { flex-direction: column; gap: 16px; }
-    .footer-content { flex-direction: column; gap: 24px; }
-    .footer-links { flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .btn { padding: 12px 24px; font-size: 13px; }
-    .btn-large { padding: 14px 28px; font-size: 14px; }
 }
