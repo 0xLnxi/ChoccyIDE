@@ -61,7 +61,7 @@ const translations = {
         'download.android.desc': 'Code on the go with built-in Linux environment',
         'download.android.button': 'Download APK',
         'download.android.version': 'Android 8-10, 12+',
-        'download.android.warning': '⚠️ Not compatible with Android 11 and Baidu IME',
+        'download.android.warning': '⚠️ Not compatible with Baidu IME',
         'download.recommended': 'Recommended',
         'download.version': 'Version',
         'download.license': 'License'
@@ -125,7 +125,7 @@ const translations = {
         'download.android.desc': '随时随地编程，内置 Linux 环境',
         'download.android.button': '下载 APK',
         'download.android.version': 'Android 8-10, 12+',
-        'download.android.warning': '⚠️ 不兼容 Android 11 和百度输入法',
+        'download.android.warning': '⚠️ 不兼容百度输入法',
         'download.recommended': '推荐',
         'download.version': '版本',
         'download.license': '许可证'
