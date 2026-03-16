@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="choccy-website/assets/icon.png" alt="Choccy IDE" width="120" height="120" style="border-radius: 24px;">
+<img src="assets/icon.png" alt="Choccy IDE" width="120" height="120" style="border-radius: 24px;">
 
 # Choccy IDE
 
