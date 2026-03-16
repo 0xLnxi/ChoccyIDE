@@ -140,6 +140,6 @@ C / C++ · Python · Java · JavaScript · TypeScript · Go · Rust · Lua · C#
 
 <div align="center">
 
-&copy; 2024-2026 Choccy IDE
+&copy; 2025-2026 Choccy IDE
 
 </div>
